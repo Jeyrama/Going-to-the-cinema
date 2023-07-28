@@ -36,3 +36,5 @@ function movie(card, ticket, perc) {
   }
   return n;
 };
+
+// or
