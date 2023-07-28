@@ -28,7 +28,7 @@ More examples:
 // Solution
 
 function movie(card, ticket, perc) {
-  var costA = n = 0,
+  let costA = n = 0,
       costB = card;
   while (Math.ceil(costB) >= costA) {
       costA += ticket;
@@ -38,3 +38,12 @@ function movie(card, ticket, perc) {
 };
 
 // or
+
+const movie = (card, ticket, perc) => {
+  let cnt = 0;
+  while (ticket * cnt <= Math.ceil(card)) {
+    cnt++;
+    card += ticket * perc ** cnt;
+  }
+  return cnt;
+}
